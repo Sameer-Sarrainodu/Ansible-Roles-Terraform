@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.sharkdev.shop
+USER_HOST: user.sharkdev.shop
+CART_HOST: cart.sharkdev.shop
+SHIPPING_HOST: shipping.sharkdev.shop
+PAYMENT_HOST: payment.sharkdev.shop

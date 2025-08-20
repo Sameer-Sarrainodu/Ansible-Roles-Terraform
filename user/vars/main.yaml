@@ -1,0 +1,2 @@
+REDIS_HOST: redis.sharkdev.shop
+MONGODB_HOST: mongodb.sharkdev.shop

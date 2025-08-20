@@ -1,0 +1,36 @@
+- name: app setup
+  include_role:
+    name: common
+    tasks_from: app-setup
+
+- name: nodejs setup
+  include_role:
+    name: common
+    tasks_from: nodejs-setup
+
+- name: copying mongod repo
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongod.repo
+
+- name: installing mongodb client 
+  ansible.builtin.dnf:
+    name: mongodb-mongosh
+    state: present
+
+- name: checking data loaded
+  ansible.builtin.command: mongosh --host mongodb.sharkdev.shop --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  register: command_output
+
+- name: printing output
+  ansible.builtin.debug:
+    msg: "{{ command_output }}"
+
+- name: loading data
+  ansible.builtin.shell: mongosh --host mongodb.sharkdev.shop < /app/db/master-data.js
+  when: command_output.stdout | int < 0
+
+- name: restarting
+  include_role:
+    name: common
+    tasks_from: systemd-setup
