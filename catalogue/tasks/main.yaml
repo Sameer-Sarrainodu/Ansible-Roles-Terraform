@@ -19,7 +19,7 @@
     state: present
 
 - name: checking data loaded
-  ansible.builtin.command: mongosh --host { MONGODB_HOST } --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  ansible.builtin.command: mongosh --host {{ MONGODB_HOST }} --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: command_output
 
 - name: printing output
@@ -27,7 +27,7 @@
     msg: "{{ command_output }}"
 
 - name: loading data
-  ansible.builtin.shell: mongosh --host { MONGODB_HOST } < /app/db/master-data.js
+  ansible.builtin.shell: mongosh --host {{ MONGODB_HOST }} < /app/db/master-data.js
   when: command_output.stdout | int < 0
 
 - name: restarting

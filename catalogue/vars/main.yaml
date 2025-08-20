@@ -1,1 +1,1 @@
-MONGODB_HOST: mongodb-{ env }.sharkdev.shop
+MONGODB_HOST: "mongodb-{{ env }}.sharkdev.shop"
