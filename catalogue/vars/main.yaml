@@ -1,1 +1,1 @@
-MONGODB_HOST: mongodb.sharkdev.shop
+MONGODB_HOST: mongodb-{ env }.sharkdev.shop

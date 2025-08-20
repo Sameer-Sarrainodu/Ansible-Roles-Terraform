@@ -1,2 +1,2 @@
-REDIS_HOST: redis.sharkdev.shop
-MONGODB_HOST: mongodb.sharkdev.shop
+REDIS_HOST: redis-{ env }.sharkdev.shop
+MONGODB_HOST: mongodb-{ env }.sharkdev.shop

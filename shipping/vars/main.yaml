@@ -1,2 +1,2 @@
-MYSQL_HOST: mysql.sharkdev.shop
-CART_HOST: cart.sharkdev.shop
+MYSQL_HOST: mysql-{ env }.sharkdev.shop
+CART_HOST: cart-{ env }.sharkdev.shop
