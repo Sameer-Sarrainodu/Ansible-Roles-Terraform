@@ -1,4 +1,4 @@
-- name: running "{{ component }}"
+- name: configure "{{ component }}"
   become: yes
   # hosts: "{{ component }}"
   hosts: localhost
