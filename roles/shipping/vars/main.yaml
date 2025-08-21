@@ -1,2 +1,4 @@
-MYSQL_HOST: mysql-{ env }.sharkdev.shop
-CART_HOST: cart-{ env }.sharkdev.shop
+MYSQL_HOST: mysql-{{ env }}.sharkdev.shop
+CART_HOST: cart-{{ env }}.sharkdev.shop
+MYSQL_ROOT_USER: root
+MYSQL_ROOT_PASSWORD: Roboshop@1
