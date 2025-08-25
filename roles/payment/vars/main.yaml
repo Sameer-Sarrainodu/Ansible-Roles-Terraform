@@ -1,5 +1,5 @@
 RABBITMQ_HOST: rabbitmq-{{ env }}.sharkdev.shop
-CART_HOST: cart-{{ env }}.sharkdev.shop
-USER_HOST: user-{{ env }}.sharkdev.shop
+CART_HOST: cart.backend-{{ env }}.sharkdev.shop
+USER_HOST: user.backend-{{ env }}.sharkdev.shop
 RABBITMQ_USER: roboshop
 RABBITMQ_PASSWORD: roboshop123

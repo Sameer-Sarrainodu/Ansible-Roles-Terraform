@@ -1,2 +1,2 @@
-CATALOGUE_HOST: catalogue-{{ env }}.sharkdev.shop
+CATALOGUE_HOST: catalogue.backend-{{ env }}.sharkdev.shop
 REDIS_HOST: redis-{{ env }}.sharkdev.shop
